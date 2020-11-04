@@ -1,6 +1,6 @@
 {
-  "name": "capacitor-file-picker",
-  "version": "0.0.1",
+  "name": "capacitor-file-picker-2",
+  "version": "0.0.2",
   "description": "A file picker for Android and iOS",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
