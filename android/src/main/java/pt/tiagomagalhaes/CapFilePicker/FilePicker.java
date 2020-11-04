@@ -1,4 +1,4 @@
-package pt.tiagomagalhaes.CapacitorFilePicker;
+package pt.tiagomagalhaes.CapFilePicker;
 
 import android.app.Activity;
 import android.content.Context;
@@ -49,7 +49,7 @@ public class FilePicker extends Plugin {
         System.out.println("+++++");
         System.out.println(extensions);
         System.out.println("+++++");
-        Intent chooseFile = new Intent(Intent.ACTION_GET_CONTENT); // Intent.ACTION_OPEN_DOCUMENT, Intent.ACTION_OPEN_DOCUMENT_TREE
+        Intent chooseFile = new Intent(Intent.ACTION_OPEN_DOCUMENT); // Intent.ACTION_OPEN_DOCUMENT, Intent.ACTION_OPEN_DOCUMENT_TREE
 
         String[] supportedMimeTypes = new String[extensions.length()];
         String type;
@@ -68,7 +68,8 @@ public class FilePicker extends Plugin {
                 {
                     supportedMimeTypes[i] = "audios/*";
                 }
-                else if (extensions.getString(i) == "csv") {
+                else if (extensions.getString(i) == "csv")
+                {
                     supportedMimeTypes[i] = "text/csv";
                 }
                 else if(extensions.getString(i) == "*")
@@ -86,7 +87,8 @@ public class FilePicker extends Plugin {
         }
         chooseFile.putExtra(Intent.EXTRA_MIME_TYPES,supportedMimeTypes);
         chooseFile.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, value);
-        chooseFile.setType("*/*");
+        // chooseFile.setType("*/*");
+        chooseFile.setType("text/csv");
         chooseFile.addCategory(Intent.CATEGORY_OPENABLE);
         chooseFile = Intent.createChooser(chooseFile, "Choose file(s)");
         startActivityForResult(call, chooseFile, PICKFILE_RESULT_CODE);
