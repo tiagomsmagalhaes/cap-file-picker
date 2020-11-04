@@ -1,5 +1,5 @@
 
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="pt.tiagomagalhaes.capacitor-file-picker.capacitorfilepicker">
+      package="pt.tiagomagalhaes.CapacitorFilePicker">
   </manifest>
   

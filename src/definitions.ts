@@ -5,5 +5,17 @@ declare module '@capacitor/core' {
 }
 
 export interface FilePickerPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  pickFile(options: {
+    multiple: boolean;
+    extensions: string[];
+  }): Promise<{
+    paths?: string[] | string,
+    original_names?: string[] | string,
+    extensions?: string[] | string,
+    files?: FileList,
+  }>;
+
+  getContacts(filter: string): Promise<{results: any[]}>;
+
+
 }
