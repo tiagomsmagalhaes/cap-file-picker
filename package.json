@@ -1,6 +1,6 @@
 {
-  "name": "capacitor-file-picker-2",
-  "version": "0.0.4",
+  "name": "cap-file-picker",
+  "version": "0.0.3",
   "description": "A file picker for Android and iOS",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
@@ -37,7 +37,7 @@
     "dist/",
     "ios/",
     "android/",
-    "CapacitorFilePicker.podspec"
+    "CapFilePicker.podspec"
   ],
   "keywords": [
     "capacitor",
