@@ -87,8 +87,8 @@ public class FilePicker extends Plugin {
         }
         chooseFile.putExtra(Intent.EXTRA_MIME_TYPES,supportedMimeTypes);
         chooseFile.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, value);
-        // chooseFile.setType("*/*");
-        chooseFile.setType("text/csv");
+        chooseFile.setType("*/*");
+        // chooseFile.setType("text/csv");
         chooseFile.addCategory(Intent.CATEGORY_OPENABLE);
         chooseFile = Intent.createChooser(chooseFile, "Choose file(s)");
         startActivityForResult(call, chooseFile, PICKFILE_RESULT_CODE);
