@@ -1,6 +1,6 @@
 {
   "name": "cap-file-picker",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A file picker for Android and iOS",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
