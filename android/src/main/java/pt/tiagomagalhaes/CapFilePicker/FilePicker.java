@@ -49,7 +49,8 @@ public class FilePicker extends Plugin {
         System.out.println("+++++");
         System.out.println(extensions);
         System.out.println("+++++");
-        Intent chooseFile = new Intent(Intent.ACTION_OPEN_DOCUMENT); // Intent.ACTION_OPEN_DOCUMENT, Intent.ACTION_OPEN_DOCUMENT_TREE
+        // Intent chooseFile = new Intent(Intent.ACTION_OPEN_DOCUMENT); // Intent.ACTION_OPEN_DOCUMENT, Intent.ACTION_OPEN_DOCUMENT_TREE
+        Intent chooseFile = new Intent(Intent.ACTION_GET_CONTENT); // Intent.ACTION_OPEN_DOCUMENT, Intent.ACTION_OPEN_DOCUMENT_TREE
 
         String[] supportedMimeTypes = new String[extensions.length()];
         String type;
